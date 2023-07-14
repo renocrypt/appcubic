@@ -1,0 +1,116 @@
+---
+layout: default
+---
+<div class="relative z-10 max-w-screen-lg xl:max-w-screen-xl mx-auto p-8">
+  <h1 class="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight mt-10 mb-4 sm:mt-14 sm:mb-6 underline decoration-lime-400 hover:decoration-blue-400">
+    AppCubic
+  </h1>
+  <div class="h-24">
+    <span
+      class="txt-type sm:text-4xl text-2xl font-extrabold underline decoration-lime-200 hover:decoration-sky-600"
+      data-wait="1000"
+      data-words='["Empowers individuals and businesses with transformative digital solutions", "Enhances research efficiency through modern methodologies", "Bridges style enthusiasts with their desired designer products"]'></span>
+  </div>
+  <span
+    class="txt-type sm:text-4xl text-2xl font-extrabold underline decoration-lime-200 hover:decoration-sky-600"
+    data-wait="1000"
+    data-words='["Empowers individuals and businesses with transformative digital solutions", "Enhances research efficiency through modern methodologies", "Bridges style enthusiasts with their desired designer products"]'></span>
+
+  <div class="flex flex-wrap space-y-4 sm:space-y-0 sm:space-x-4 text-center">
+    <button
+      onclick="location.href='https://benji.appcubic.com'"
+      " class="
+      w-full
+      btn
+      sm:w-auto
+      flex-none
+      hover:bg-green-950
+      text-lg
+      leading-6
+      font-semibold
+      py-3
+      px-4
+      border
+      border-transparent
+      rounded-xl
+      focus:ring-2
+      focus:ring-offset-2
+      focus:ring-offset-white
+      focus:ring-green-950
+      focus:outline-none
+      transition-colors
+      duration-200">who's Benji?</button>
+  </div>
+
+  <div class="h-6"></div>
+
+  <p class="max-w-screen-lg text-xs sm:leading-10 font-medium">AppCubic site is made with
+    <a href="#" class="font-mono text-red-400 link font-bold">jekyll</a>
+    static site generator,
+    <a href="#" class="font-mono text-blue-400 link font-bold">tailwindcss framework</a>,
+    <a href="#" class="font-mono text-emerald-400 link font-bold">daisyUI</a>
+    Tailwind CSS component library, and
+    <a href="#" class="font-mono text-orange-950 link font-bold">Gaggia Brera</a>
+    coffee.
+  </p>
+
+</div>
+
+<div class="py-16 sm:text-center mx-auto">
+  <h1 class="mb-4 text-3xl sm:text-4xl tracking-tight font-bold">
+    <span class="box-decoration-slice rounded-lg bg-gradient-to-r from-green-600 to-blue-700 text-white px-5 py-2">
+      What Does AppCubic Do?<br/>
+    </span>
+  </h1>
+</div>
+
+<div class="relative sm:columns-1 md:columns-2 lg:columns-3 gap-4">
+  <div class="card card-compact w-96 bg-base-100 shadow-xl">
+    <figure><img src="/assets/imgs/research_consulting.png" alt="img" /></figure>
+    <div class="card-body">
+      <h2 class="card-title">Research Consulting</h2>
+      <p>If a dog chews shoes whose shoes does he choose?</p>
+      <div class="card-actions justify-end">
+        <button class="btn">Learn More</button>
+      </div>
+    </div>
+  </div>
+  <div class="card card-compact w-96 bg-base-100 shadow-xl">
+    <figure><img src="/assets/imgs/digital_transformation.png" alt="img" /></figure>
+    <div class="card-body">
+      <h2 class="card-title">Digital Transformation</h2>
+      <p>If a dog chews shoes whose shoes does he choose?</p>
+      <div class="card-actions justify-end">
+        <button class="btn">Learn More</button>
+      </div>
+    </div>
+  </div>
+  <div class="card card-compact w-96 bg-base-100 shadow-xl">
+    <figure><img src="/assets/imgs/ecommerce.png" alt="img" /></figure>
+    <div class="card-body">
+      <h2 class="card-title">Merchandizing</h2>
+      <p>If a dog chews shoes whose shoes does he choose?</p>
+      <div class="card-actions justify-end">
+        <button class="btn">Learn More</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="max-w-[52rem] mx-auto px-4 pb-28 sm:px-6 md:px-8 xl:px-12 lg:max-w-6xl">
+  <div class="py-16 sm:text-center">
+    <h1 class="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold">Latest Posts</h1>
+  </div>
+  <div class="relative sm:pb-12 sm:ml-[calc(2rem+1px)] md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-48rem))]">
+    <div class="hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-base-200 dark:bg-base-800 sm:block"></div>
+    <div class="space-y-16">
+      {% for p in site.posts limit: 3 %}
+        {% include article-list.liquid %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="py-16 text-center">
+    <a href="/blog" class="btn hover:bg-cyan-950 btn-wide">View all posts</a>
+  </div>
+</div>
