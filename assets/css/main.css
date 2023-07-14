@@ -2,7 +2,7 @@
 # Basic style
 ---
 
-@charset "utf-8";
+@charset "UTF-8";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
