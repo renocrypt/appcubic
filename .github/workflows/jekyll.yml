@@ -43,6 +43,8 @@ jobs:
         uses: actions/setup-node@v3.7.0
         with:
           node-version: 18
+      - name: Install NPM packages
+        run: yarn install
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
