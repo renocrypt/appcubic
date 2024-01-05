@@ -3,6 +3,6 @@ layout: home
 title: "AppCubic Home"
 ---
 
-## You're ready to go
+# AppCubic Development
 
-Start developing your Jekyll website.
+AppCubic by Benji Peng, Ph.D.

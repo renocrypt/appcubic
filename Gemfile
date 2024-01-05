@@ -7,4 +7,5 @@ group :jekyll_plugins do
 gem "jekyll-postcss", "~> 0.5.0"
 gem "sass", "~> 3.7"
 gem 'jekyll-octicons'
+gem 'jekyll-seo-tag'
 end

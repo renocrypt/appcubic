@@ -32,3 +32,6 @@ exclude:
   - postcss.config.js
   - tailwind.config.js
   - yarn.lock
+
+plugins:
+  - jekyll-seo-tag
