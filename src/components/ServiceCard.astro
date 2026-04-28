@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  image: string;
+  alt: string;
+}
+
+const { title, description, href, image, alt } = Astro.props;
+const isExternal = href.startsWith("http");
+---
+
+<article class="service-card">
+  <img src={image} alt={alt} loading="lazy" decoding="async" />
+  <div class="service-card-body">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <a href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noreferrer" : undefined}>
+      Explore
+    </a>
+  </div>
+</article>

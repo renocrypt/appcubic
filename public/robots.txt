@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://appcubic.com/sitemap-index.xml

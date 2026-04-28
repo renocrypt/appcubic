@@ -1,0 +1,56 @@
+---
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+import { site } from "../data/site";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "About AppCubic | Applied AI Venture Studio";
+const description =
+  "AppCubic is an applied AI venture studio for agentic systems, research-to-product workflows, and technical advisory work with technical partners.";
+---
+
+<BaseLayout title={title} description={description} pathname="/about/">
+  <Nav />
+  <main class="page-main">
+    <div class="page-shell">
+      <p class="section-label">About</p>
+      <h1 class="page-title">An applied AI venture studio for technical partners.</h1>
+      <p class="page-lede">
+        AppCubic started in 2019 as a practical builder and operator vehicle. It now serves as the
+        studio layer for applied AI products, research workflows, and technically grounded advisory work.
+      </p>
+
+      <div class="content">
+        <p>
+          The work is intentionally close to implementation. AppCubic is interested in systems that
+          survive contact with real workflows: LLM orchestration with tool boundaries, evaluation
+          loops, data movement, user-facing product surfaces, and the operational choices that make
+          a prototype worth continuing.
+        </p>
+
+        <h2>What AppCubic builds around</h2>
+        <p>
+          The studio draws from several streams of work: e-commerce and logistics systems, technical
+          advisory for early teams, LLM decision-support products, camera-based motion understanding,
+          and research tooling. The common thread is not a vertical label. It is the habit of turning
+          uncertain technical work into a concrete operating surface.
+        </p>
+
+        <h2>How the work is framed</h2>
+        <p>
+          AppCubic treats AI as infrastructure for decisions and workflows, not as a decorative
+          feature. Useful systems need retrieval and context design, model-evaluation discipline,
+          clear human review points, and enough product judgment to know when automation should stop.
+        </p>
+
+        <h2>Where to go next</h2>
+        <p>
+          Research-oriented systems live at <a href={site.links.research}>research.appcubic.com</a>.
+          Adjacent product and operations work connects through <a href={site.links.futur}>Futur</a>.
+          Personal background remains available at <a href={site.links.benji}>Benji's site</a>.
+        </p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

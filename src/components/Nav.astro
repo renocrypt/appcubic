@@ -1,0 +1,30 @@
+---
+import { site } from "../data/site";
+import ThemeToggle from "./ThemeToggle.astro";
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/about/", label: "About" },
+];
+---
+
+<header class="site-header">
+  <nav class="nav-shell" aria-label="Primary navigation">
+    <a class="brand" href="/" aria-label={`${site.name} home`}>
+      {site.name}
+    </a>
+    <div class="nav-links">
+      {
+        links.map((link) => (
+          <a href={link.href} class:list={["nav-link", Astro.url.pathname === link.href && "active"]}>
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+    <div class="nav-actions">
+      <ThemeToggle />
+      <a class="nav-cta" href={site.links.benji}>Benji</a>
+    </div>
+  </nav>
+</header>
