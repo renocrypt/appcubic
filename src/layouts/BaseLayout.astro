@@ -32,6 +32,12 @@ const structuredData = [
     url: site.url,
     description: site.description,
     sameAs: [site.links.github],
+    subOrganization: {
+      "@type": "Organization",
+      name: "App Automaton",
+      url: site.links.appautomatonSite,
+      sameAs: [site.links.appautomatonOrg],
+    },
   },
   {
     "@context": "https://schema.org",

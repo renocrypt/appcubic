@@ -1,0 +1,96 @@
+---
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+import { site } from "../data/site";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "App Automaton | Open-source AI agent tooling by AppCubic";
+const description =
+  "App Automaton is AppCubic's open-source GitHub organization: portable skills for coding agents, harnesses and orchestration, and pure-MLX models for Apple Silicon.";
+
+const org = "https://github.com/appautomaton";
+const siteUrl = "https://appautomaton.github.io/";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://appautomaton.github.io/#org",
+  name: "App Automaton",
+  url: siteUrl,
+  description:
+    "An open-source workshop for engineering with coding agents. Portable SKILLs, stage-gated runtimes, and pure-MLX work for Apple Silicon.",
+  sameAs: [org],
+  parentOrganization: {
+    "@type": "Organization",
+    name: site.name,
+    url: site.url,
+  },
+};
+---
+
+<BaseLayout title={title} description={description} pathname="/appautomaton/">
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(structuredData)} />
+  <Nav />
+  <main class="page-main">
+    <div class="page-shell">
+      <p class="section-label">Open source</p>
+      <h1 class="page-title">App Automaton, the studio's open workshop.</h1>
+      <p class="page-lede">
+        App Automaton is where AppCubic builds in public. It is a GitHub organization of MIT-licensed
+        tooling for AI coding agents, introduced at
+        <a href={siteUrl}>appautomaton.github.io</a> and developed at
+        <a href={org}>github.com/appautomaton</a>.
+      </p>
+
+      <div class="content">
+        <p>
+          The premise is simple. Coding agents like Claude Code, Codex, Gemini, and OpenCode are
+          capable, but they work best when you hand them clear workflows, honest constraints, and
+          good tools. App Automaton packages those things in forms you can clone, symlink, and use
+          the same day. Everything is plain text first, portable across agents, and shaped by daily
+          use inside the studio.
+        </p>
+
+        <h2>Skills that teach agents workflows</h2>
+        <p>
+          The flagship is <a href={`${org}/agent-designer`}>agent-designer</a>, a portable skills
+          workspace with issue-driven planning and bridge scripts that let one agent consult another
+          without losing the session. It has its own
+          <a href="https://appautomaton.github.io/agent-designer/">deep-dive page</a>. Around it sit
+          <a href={`${org}/document-SKILLs`}>document-SKILLs</a> for Word, Excel, PowerPoint, and PDF
+          work, <a href={`${org}/presentation`}>presentation</a> for consulting-quality decks, and
+          <a href={`${org}/webmaton`}>webmaton</a> for web research with grounded citations.
+        </p>
+
+        <h2>Harnesses that keep agents honest</h2>
+        <p>
+          <a href={`${org}/automaton`}>automaton</a> is a stage-gated harness that walks an agent
+          from framing through planning, review, execution, and verification, with durable state in
+          the repository. <a href={`${org}/automux`}>automux</a> orchestrates several agents at once
+          in tmux, each in its own git worktree, coordinating through files. Smaller tools such as
+          <a href={`${org}/markmaton`}>markmaton</a> handle the sharp edges, like turning HTML into
+          clean Markdown.
+        </p>
+
+        <h2>Models that run on the laptop</h2>
+        <p>
+          A third shelf is pure MLX work for Apple Silicon, with no cloud and no PyTorch.
+          <a href={`${org}/mlx-speech`}>mlx-speech</a> covers speech synthesis, voice cloning, and
+          recognition. <a href={`${org}/tnt-asr`}>tnt-asr</a> is a terminal voice-to-text tool that
+          transcribes in about a second. <a href={`${org}/ltx-video-mlx`}>ltx-video-mlx</a> generates
+          video with synchronized audio on device.
+        </p>
+
+        <h2>Where to start</h2>
+        <p>
+          The <a href={siteUrl}>App Automaton site</a> gives the full tour, including the anatomy of
+          a skill and a three-command quickstart. If you would rather read code, start with
+          <a href={`${org}/agent-designer`}>agent-designer on GitHub</a> and work outward. Everything
+          is MIT licensed, and issues and pull requests are welcome across the
+          <a href={org}>organization</a>.
+        </p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

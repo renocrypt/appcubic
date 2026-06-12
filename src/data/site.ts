@@ -3,13 +3,15 @@ export const site = {
   url: "https://appcubic.com",
   title: "AppCubic | Applied AI Venture Studio",
   description:
-    "AppCubic is an applied AI venture studio building agentic systems, research-to-product workflows, and technical advisory foundations for technical partners.",
+    "AppCubic is an applied AI venture studio. It builds agentic systems, turns research into working products, and advises technical teams.",
   author: "Benji",
   locale: "en_US",
   gaMeasurementId: "G-KXQTJHDL8D",
   ogImage: "/assets/imgs/og-image.png",
   links: {
-    appautomaton: "https://github.com/appautomaton",
+    appautomaton: "/appautomaton/",
+    appautomatonOrg: "https://github.com/appautomaton",
+    appautomatonSite: "https://appautomaton.github.io",
     benji: "https://benji.renocrypt.com",
     github: "https://github.com/appautomaton",
     research: "https://research.appcubic.com",
@@ -21,7 +23,7 @@ export const services = [
   {
     title: "Agentic Systems",
     description:
-      "AppAutomaton is the public proof point: portable skills, web capture, document workflows, coding orchestration, worktrees, runtime config, and local model tooling for AI agents.",
+      "App Automaton is the studio's open-source workshop: portable skills for coding agents, document and web tooling, multi-agent orchestration, and local models for Apple Silicon.",
     href: site.links.appautomaton,
     image: "/assets/imgs/agentic-systems.svg",
     alt: "Applied AI systems illustration",
@@ -29,7 +31,7 @@ export const services = [
   {
     title: "Research-to-Product Workflows",
     description:
-      "Scientific, analytical, and technical workflows translated into usable systems with attention to correctness and repeatability.",
+      "Scientific and analytical workflows turned into systems people can actually run, built with care for correctness and repeatability.",
     href: site.links.research,
     image: "/assets/imgs/research-to-product.svg",
     alt: "Research workflow illustration",
@@ -37,7 +39,7 @@ export const services = [
   {
     title: "Venture Studio & Advisory",
     description:
-      "Early product strategy, technical diligence, grant support, and venture incubation for AI-first products and operators.",
+      "Early product strategy, technical diligence, grant support, and incubation for AI-first products and the people building them.",
     href: "/about/",
     image: "/assets/imgs/venture-studio-advisory.svg",
     alt: "Venture operations illustration",

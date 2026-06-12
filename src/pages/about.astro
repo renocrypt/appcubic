@@ -6,7 +6,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 const title = "About AppCubic | Applied AI Venture Studio";
 const description =
-  "AppCubic is an applied AI venture studio for agentic systems, research-to-product workflows, and technical advisory work with technical partners.";
+  "AppCubic is an applied AI venture studio. It builds agentic systems, turns research into working products, and advises technical teams.";
 ---
 
 <BaseLayout title={title} description={description} pathname="/about/">
@@ -14,40 +14,48 @@ const description =
   <main class="page-main">
     <div class="page-shell">
       <p class="section-label">About</p>
-      <h1 class="page-title">An applied AI venture studio for technical partners.</h1>
+      <h1 class="page-title">A small studio for applied AI.</h1>
       <p class="page-lede">
-        AppCubic started in 2019 as a practical builder and operator vehicle. It now serves as the
-        studio layer for applied AI products, research workflows, and technically grounded advisory work.
+        AppCubic started in 2019 as a hands-on building practice. Today it is the studio behind
+        applied AI products, research workflows, and advisory work for technical teams.
       </p>
 
       <div class="content">
         <p>
-          The work is intentionally close to implementation. AppCubic is interested in systems that
-          survive contact with real workflows: LLM orchestration with tool boundaries, evaluation
-          loops, data movement, user-facing product surfaces, and the operational choices that make
-          a prototype worth continuing.
+          The work stays close to implementation. AppCubic cares about systems that survive contact
+          with real workflows: LLM orchestration with clear tool boundaries, evaluation loops, data
+          movement, product surfaces people actually use, and the operational choices that make a
+          prototype worth continuing.
         </p>
 
         <h2>What AppCubic builds around</h2>
         <p>
-          The studio draws from several streams of work: e-commerce and logistics systems, technical
-          advisory for early teams, LLM decision-support products, camera-based motion understanding,
-          and research tooling. The common thread is not a vertical label. It is the habit of turning
-          uncertain technical work into a concrete operating surface.
+          The studio draws on several streams of work: e-commerce and logistics systems, advisory
+          for early teams, LLM decision support, camera-based motion understanding, and research
+          tooling. What ties them together is not a vertical. It is the habit of turning uncertain
+          technical work into something a team can operate.
+        </p>
+
+        <h2>Open source</h2>
+        <p>
+          Much of the studio's agent tooling is public. <a href={site.links.appautomaton}>App
+          Automaton</a> is the open-source side of AppCubic: portable skills for coding agents,
+          document and web tooling, multi-agent orchestration, and pure-MLX models for Apple
+          Silicon, all MIT licensed on GitHub.
         </p>
 
         <h2>How the work is framed</h2>
         <p>
-          AppCubic treats AI as infrastructure for decisions and workflows, not as a decorative
-          feature. Useful systems need retrieval and context design, model-evaluation discipline,
-          clear human review points, and enough product judgment to know when automation should stop.
+          AppCubic treats AI as infrastructure for decisions and workflows rather than as a
+          decorative feature. Useful systems need retrieval and context design, honest evaluation,
+          clear points for human review, and the judgment to know where automation should stop.
         </p>
 
         <h2>Where to go next</h2>
         <p>
-          Research-oriented systems live at <a href={site.links.research}>research.appcubic.com</a>.
-          Adjacent product and operations work connects through <a href={site.links.futur}>Futur</a>.
-          Personal background remains available at <a href={site.links.benji}>Benji's site</a>.
+          Research systems live at <a href={site.links.research}>research.appcubic.com</a>. Adjacent
+          product and operations work connects through <a href={site.links.futur}>Futur</a>. Personal
+          background is at <a href={site.links.benji}>Benji's site</a>.
         </p>
       </div>
     </div>
