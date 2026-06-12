@@ -63,11 +63,11 @@ const structuredData = [
     <script is:inline>
       (() => {
         try {
+          const urlTheme = new URLSearchParams(location.search).get("theme");
           const savedTheme = localStorage.getItem("theme");
-          const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-          document.documentElement.dataset.theme = savedTheme || systemTheme;
+          document.documentElement.dataset.theme = urlTheme || savedTheme || "dark";
         } catch {
-          document.documentElement.dataset.theme = "light";
+          document.documentElement.dataset.theme = "dark";
         }
       })();
     </script>
@@ -78,7 +78,8 @@ const structuredData = [
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
     />
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
     {noindex && <meta name="robots" content="noindex,nofollow" />}
 
     <meta property="og:site_name" content={site.name} />

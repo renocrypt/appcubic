@@ -1,8 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
-import ServiceCard from "../components/ServiceCard.astro";
-import { services, site } from "../data/site";
+import { site } from "../data/site";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { ChartNoAxesCombined, ShieldCheck, Workflow } from "@lucide/astro";
 ---
@@ -35,8 +34,55 @@ import { ChartNoAxesCombined, ShieldCheck, Workflow } from "@lucide/astro";
             products, scientific tooling, and the operations around them.
           </p>
         </div>
-        <div class="service-grid">
-          {services.map((service) => <ServiceCard {...service} />)}
+        <div class="bento">
+          <article class="bento-cell bento-feature">
+            <p class="bento-kicker">Agentic systems</p>
+            <h3>App Automaton, the studio's open workshop.</h3>
+            <p>
+              Portable skills for coding agents, document and web tooling, multi-agent
+              orchestration, and local models for Apple Silicon. Built in public, shaped by daily
+              use inside the studio.
+            </p>
+            <div class="bento-term" aria-hidden="true">
+              <span class="t-prompt">$</span>
+              <span class="t-cmd">gh repo clone appautomaton/agent-designer</span>
+              <span class="t-ok">✓ skills · bridges · issue-driven workflow</span>
+            </div>
+            <a class="bento-link" href={site.links.appautomaton}>Explore App Automaton</a>
+          </article>
+
+          <article class="bento-cell bento-half">
+            <p class="bento-kicker">Research to product</p>
+            <h3>Workflows that ship.</h3>
+            <p>
+              Scientific and analytical workflows turned into systems people can actually run,
+              built for correctness and repeatability.
+            </p>
+            <a class="bento-link" href={site.links.research}>Research systems</a>
+          </article>
+
+          <article class="bento-cell bento-half">
+            <p class="bento-kicker">Venture &amp; advisory</p>
+            <h3>From diligence to incubation.</h3>
+            <p>
+              Early product strategy, technical diligence, grant support, and incubation for
+              AI-first products.
+            </p>
+            <a class="bento-link" href="/about/">About the studio</a>
+          </article>
+
+          <article class="bento-cell bento-wide">
+            <div>
+              <p class="bento-kicker">Open source</p>
+              <p>MIT-licensed tooling, public on GitHub and in daily use.</p>
+            </div>
+            <a class="bento-link" href={site.links.appautomatonOrg}>github.com/appautomaton</a>
+          </article>
+
+          <article class="bento-cell bento-half bento-stat">
+            <p class="bento-stat-num">2019</p>
+            <p class="bento-stat-lbl">Building since</p>
+          </article>
         </div>
       </div>
     </section>
