@@ -81,6 +81,45 @@ const structuredData = {
           video with synchronized audio on device.
         </p>
 
+        <h2>Repositories to start with</h2>
+        <ul class="repo-list">
+          <li>
+            <a href={`${org}/document-SKILLs`}>appautomaton/document-SKILLs</a>
+            <p>
+              Claude Code and Codex SKILLs for PDF, Excel, Word, and PowerPoint work: extraction,
+              forms, formulas, and tracked changes, adapted from Anthropic's skills.
+            </p>
+          </li>
+          <li>
+            <a href={`${org}/presentation`}>appautomaton/presentation</a>
+            <p>
+              Claude Code and Codex SKILLs for consulting-quality decks: strategy storyboarding,
+              brand-system identity, and pixel-perfect PDF or editable PPTX output.
+            </p>
+          </li>
+          <li>
+            <a href={`${org}/webmaton`}>appautomaton/webmaton</a>
+            <p>
+              Portable web-research and browser-automation SKILLs for Claude Code, Codex, and
+              OpenCode: Playwright, Chrome DevTools, nodriver, and HTML to Markdown.
+            </p>
+          </li>
+          <li>
+            <a href={`${org}/mlx-speech`}>appautomaton/mlx-speech</a>
+            <p>
+              Pure-MLX speech synthesis, voice cloning, dialogue, sound effects, and ASR for Apple
+              Silicon: Fish S2 Pro, VibeVoice, LongCat, MOSS, Step-Audio, and Cohere ASR.
+            </p>
+          </li>
+          <li>
+            <a href={`${org}/tnt-asr`}>appautomaton/tnt-asr</a>
+            <p>
+              A terminal voice-to-text TUI built on mlx-speech. Qwen3-ASR on the Apple GPU, fully
+              local, no PyTorch, transcribes in about a second.
+            </p>
+          </li>
+        </ul>
+
         <h2>Where to start</h2>
         <p>
           The <a href={siteUrl}>App Automaton site</a> gives the full tour, including the anatomy of
@@ -94,3 +133,28 @@ const structuredData = {
   </main>
   <Footer />
 </BaseLayout>
+
+<style>
+  .repo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5em;
+  }
+  .repo-list li {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .repo-list li:first-child {
+    border-top: 1px solid var(--line);
+  }
+  .repo-list a {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  .repo-list p {
+    margin: 6px 0 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+</style>
